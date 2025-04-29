@@ -18,6 +18,9 @@ The first step involved loading the raw Uber trip data from a CSV file. The data
 - **Removing Duplicates**: Duplicates were removed to ensure data integrity.
 
 ### 2. **Dimension Tables Creation**
+## **Database Schema Diagram**
+![Table Merging Diagram](images/database_schema_diagram.png)
+
 The following dimension tables were created from the dataset:
 
 - **Datetime Dimension**: This table captures time-related attributes like the hour, day, month, and year of both pickup and dropoff times.
@@ -71,9 +74,6 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 - **Power BI**: For creating interactive dashboards and visualizing insights using data imported from the MySQL database.
-
-## **Database Schema Diagram**
-![Table Merging Diagram](images/database_schema_diagram.png)
 
 ## **Project Structure**
 The project consists of the following files:
