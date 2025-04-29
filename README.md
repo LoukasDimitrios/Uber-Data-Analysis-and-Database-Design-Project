@@ -52,7 +52,7 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 1. **Average Fare & Total Tips per Trip Duration Category**
    - **Chart Type**: Clustered Column Chart
    - **Description**: This chart visualizes the average fare amount and the total tip amount for each trip duration category (e.g., Very Short, Short, Medium, Long, Very Long). It helps to understand the relationship between fare and tips across different trip durations.
-
+![Table Merging Diagram](plots/ClusteredColumns.png)
 2. **Average Fare Amount by Trip Duration Category**
    - **Chart Type**: Line Chart
    - **Description**: This chart displays the average fare amount for each trip duration category, showing how the fare amount changes as the trip duration increases. It provides insight into the correlation between trip duration and fare amounts.
