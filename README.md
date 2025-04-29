@@ -59,17 +59,18 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 
 3. **Percentage of Trips by Trip Duration Category**
 
-## **Technologies Used**
+# **Technologies Used**
 - **Python**: For data manipulation, preprocessing, and ETL (using libraries like `pandas` and `sqlalchemy`).
 - **MySQL**: For storing and querying the processed data in a structured database.
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 
-## **Database Schema Diagram**
+# **Database Schema Diagram**
 ![Table Merging Diagram](images/blank_diagram.png)
 
-## **Project Structure**
+# **Project Structure**
 The project consists of the following files:
 - `process_data.py`: Python script containing the entire ETL pipeline.
 - `data/uber_data.csv`: The raw data file used for processing.
+- `images/blank_diagram`: The Database Schema Diagram.
 
