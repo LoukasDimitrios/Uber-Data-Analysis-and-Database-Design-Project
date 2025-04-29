@@ -39,15 +39,15 @@ After constructing the fact and dimension tables, the final step was to load the
 - The tables were inserted into the database using the `to_sql()` function.
 - The schema is now ready for analysis and querying.
 
-## 5. **Data Exploration and Querying in MySQL**
+### 5. **Data Exploration and Querying in MySQL**
 
 After loading the structured data into the MySQL database, several SQL queries were executed in **MySQL Workbench** to explore the data and extract preliminary insights. These queries helped verify the integrity of the ETL process and supported deeper understanding of usage patterns and revenue distribution. In particular, a new table, **trip_duration_categories**, was created to categorize trips based on their duration. The table was constructed using the following SQL query:
 
-## 6. **Visualization in Power BI**
+### 6. **Visualization in Power BI**
 
 After loading the data into MySQL, the structured schema was connected to **Power BI** for advanced data visualization and analysis. Using the MySQL database connector, the dimension and fact tables were imported into Power BI and relationships were defined accordingly, following the star schema structure.
 
-### Dashboards and Charts Created:
+## Dashboards and Charts Created:
 
 1. **Average Fare & Total Tips per Trip Duration Category**
    - **Chart Type**: Clustered Column Chart
@@ -65,11 +65,12 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 
-## **Data Flow Diagram**
-![Table Merging Diagram](images/table_merging_diagram.png)
+## **Database Schema Diagram**
+![Table Merging Diagram](images/blank_diagram.png)
 
 ## **Project Structure**
 The project consists of the following files:
 - `process_data.py`: Python script containing the entire ETL pipeline.
 - `data/uber_data.csv`: The raw data file used for processing.
+- `images/blank_diagram`: The Database Schema Diagram.
 
