@@ -52,13 +52,17 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 1. **Average Fare & Total Tips per Trip Duration Category**
    - **Chart Type**: Clustered Column Chart
    - **Description**: This chart visualizes the average fare amount and the total tip amount for each trip duration category (e.g., Very Short, Short, Medium, Long, Very Long). It helps to understand the relationship between fare and tips across different trip durations.
-![Table Merging Diagram](plots/ClusteredColumns.png)
+![columnchart](plots/ClusteredColumns.png)
 2. **Average Fare Amount by Trip Duration Category**
    - **Chart Type**: Line Chart
    - **Description**: This chart displays the average fare amount for each trip duration category, showing how the fare amount changes as the trip duration increases. It provides insight into the correlation between trip duration and fare amounts.
-
+![linechart](plots/LineChart.png)
 3. **Percentage of Trips by Trip Duration Category**
-
+   ![piechart](plots/PieChart.png)
+4. **Interactive Map of Trip Pickup Locations**
+   - **Chart Type**: Interactive Map
+   - **Description**: An interactive map was created using **Folium** in Python, visualizing the spatial distribution of trip pickup points across New York City. This map provides geographical insights into the density and spread of trip activity, helping to identify high-demand areas and possible service patterns. The visualization enhances spatial understanding beyond tabular or chart-based analyses.
+![map](plots/NYC_map.png)
 ## **Technologies Used**
 - **Python**: For data manipulation, preprocessing, and ETL (using libraries like `pandas` and `sqlalchemy`).
 - **MySQL**: For storing and querying the processed data in a structured database.
