@@ -10,9 +10,7 @@ The process consists of the following major steps:
 3. **Fact Table Creation**: Combining the dimension tables with the raw trip data to create a fact table, which holds the core transactional data (trip details) and links to the dimension tables via foreign keys.
 4. **Data Loading into MySQL**: Loading the processed data into a MySQL database, creating a well-structured schema for easy querying and reporting.
 
-## **Step-by-Step Description**
-
----
+# **Step-by-Step Description**
 
 ## 1. **Loading and Preprocessing the Data**
 The first step involved loading the raw Uber trip data from a CSV file. The data was inspected, cleaned, and transformed for further processing:
