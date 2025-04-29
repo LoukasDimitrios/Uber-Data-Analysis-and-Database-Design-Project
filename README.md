@@ -27,6 +27,8 @@ The following dimension tables were created from the dataset:
 - **Rate Code Dimension**: This table associates each trip's `RatecodeID` with a descriptive label (e.g., Standard Rate, JFK, Newark).
 - **Location Dimensions (Pickup and Dropoff)**: These tables store unique combinations of pickup and dropoff locations using latitude and longitude coordinates.
 - **Payment Type Dimension**: This table links each trip to a payment method (e.g., credit card, cash).
+
+The scheme is drawn into a following picture:
 <h4 align="center">Database Schema Diagram</h4>
 
 ![Table Merging Diagram](images/database_schema_diagram.png)
