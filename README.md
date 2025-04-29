@@ -1,9 +1,9 @@
 # **Uber Data Analysis and Database Design Project**
 
-## **Project Overview**
+# **Project Overview**
 This project focuses on analyzing and processing a dataset of Uber trip data, aiming to construct a data warehouse schema composed of dimension and fact tables. The project is structured around the **Kimball methodology** for building a star schema. The dataset includes various attributes such as trip ID, passenger count, trip distance, fare amount, payment type, pickup and dropoff locations, and more. The main goal was to design an ETL process that converts raw data into a format suitable for analysis and reporting.
 
-## **Process Overview**
+# **Process Overview**
 The process consists of the following major steps:
 1. **Data Cleaning and Preprocessing**: Importing and preparing the data for transformation and analysis.
 2. **Dimensional Modeling**: Creating dimension tables that capture business-relevant entities, such as time (datetime), passenger count, trip distance, payment type, and locations.
