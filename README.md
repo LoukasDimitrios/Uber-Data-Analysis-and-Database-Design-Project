@@ -1,23 +1,23 @@
 # **Uber Data Analysis and Database Design Project**
 
-# **Project Overview**
+## **Project Overview**
 This project focuses on analyzing and processing a dataset of Uber trip data, aiming to construct a data warehouse schema composed of dimension and fact tables. The project is structured around the **Kimball methodology** for building a star schema. The dataset includes various attributes such as trip ID, passenger count, trip distance, fare amount, payment type, pickup and dropoff locations, and more. The main goal was to design an ETL process that converts raw data into a format suitable for analysis and reporting.
 
-# **Process Overview**
+## **Process Overview**
 The process consists of the following major steps:
 1. **Data Cleaning and Preprocessing**: Importing and preparing the data for transformation and analysis.
 2. **Dimensional Modeling**: Creating dimension tables that capture business-relevant entities, such as time (datetime), passenger count, trip distance, payment type, and locations.
 3. **Fact Table Creation**: Combining the dimension tables with the raw trip data to create a fact table, which holds the core transactional data (trip details) and links to the dimension tables via foreign keys.
 4. **Data Loading into MySQL**: Loading the processed data into a MySQL database, creating a well-structured schema for easy querying and reporting.
 
-# **Step-by-Step Description**
+## **Step-by-Step Description**
 
-## 1. **Loading and Preprocessing the Data**
+### 1. **Loading and Preprocessing the Data**
 The first step involved loading the raw Uber trip data from a CSV file. The data was inspected, cleaned, and transformed for further processing:
 - **Datetime Processing**: The `pickup_datetime` and `dropoff_datetime` columns were converted into `datetime` format, allowing for easier manipulation and feature extraction.
 - **Removing Duplicates**: Duplicates were removed to ensure data integrity.
 
-## 2. **Dimension Tables Creation**
+### 2. **Dimension Tables Creation**
 The following dimension tables were created from the dataset:
 
 - **Datetime Dimension**: This table captures time-related attributes like the hour, day, month, and year of both pickup and dropoff times.
@@ -27,27 +27,27 @@ The following dimension tables were created from the dataset:
 - **Location Dimensions (Pickup and Dropoff)**: These tables store unique combinations of pickup and dropoff locations using latitude and longitude coordinates.
 - **Payment Type Dimension**: This table links each trip to a payment method (e.g., credit card, cash).
 
-## 3. **Fact Table Construction**
+### 3. **Fact Table Construction**
 Once the dimension tables were created, they were merged with the original trip data to create a **fact table**. This table includes:
 - A unique `trip_id` for each record.
 - Foreign keys to link to each of the dimension tables (e.g., `datetime_id`, `passenger_count_id`, `trip_distance_id`).
 - Key metrics like `fare_amount`, `tip_amount`, and `total_amount`, which are the core facts of the dataset.
 
-## 4. **Loading the Data into MySQL**
+### 4. **Loading the Data into MySQL**
 After constructing the fact and dimension tables, the final step was to load the data into a MySQL database. The process used the `pandas` library in Python to insert the data into MySQL tables via the `SQLAlchemy` engine:
 - The fact table and dimension tables were created in the MySQL database.
 - The tables were inserted into the database using the `to_sql()` function.
 - The schema is now ready for analysis and querying.
 
-## 5. **Data Exploration and Querying in MySQL**
+### 5. **Data Exploration and Querying in MySQL**
 
 After loading the structured data into the MySQL database, several SQL queries were executed in **MySQL Workbench** to explore the data and extract preliminary insights. These queries helped verify the integrity of the ETL process and supported deeper understanding of usage patterns and revenue distribution. In particular, a new table, **trip_duration_categories**, was created to categorize trips based on their duration. The table was constructed using the following SQL query:
 
-## 6. **Visualization in Power BI**
+### 6. **Visualization in Power BI**
 
 After loading the data into MySQL, the structured schema was connected to **Power BI** for advanced data visualization and analysis. Using the MySQL database connector, the dimension and fact tables were imported into Power BI and relationships were defined accordingly, following the star schema structure.
 
-### Dashboards and Charts Created:
+## Dashboards and Charts Created:
 
 1. **Average Fare & Total Tips per Trip Duration Category**
    - **Chart Type**: Clustered Column Chart
@@ -59,16 +59,16 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 
 3. **Percentage of Trips by Trip Duration Category**
 
-# **Technologies Used**
+## **Technologies Used**
 - **Python**: For data manipulation, preprocessing, and ETL (using libraries like `pandas` and `sqlalchemy`).
 - **MySQL**: For storing and querying the processed data in a structured database.
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 
-# **Database Schema Diagram**
+## **Database Schema Diagram**
 ![Table Merging Diagram](images/blank_diagram.png)
 
-# **Project Structure**
+## **Project Structure**
 The project consists of the following files:
 - `process_data.py`: Python script containing the entire ETL pipeline.
 - `data/uber_data.csv`: The raw data file used for processing.
