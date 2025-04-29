@@ -12,6 +12,8 @@ The process consists of the following major steps:
 
 ## **Step-by-Step Description**
 
+---
+
 ## 1. **Loading and Preprocessing the Data**
 The first step involved loading the raw Uber trip data from a CSV file. The data was inspected, cleaned, and transformed for further processing:
 - **Datetime Processing**: The `pickup_datetime` and `dropoff_datetime` columns were converted into `datetime` format, allowing for easier manipulation and feature extraction.
