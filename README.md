@@ -45,12 +45,11 @@ After constructing the fact and dimension tables, the final step was to load the
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 
-## **Data Flow Diagram (Optional)**
-You can include a diagram of the ETL process flow, if you have created one, to illustrate how the data moves from raw to processed form through the steps.
+## **Data Flow Diagram**
+![Table Merging Diagram](images/table_merging_diagram.png)
 
-## **Running the Project**
-### Requirements
-- Python 3.x
-- Required Python packages:
-  ```bash
-  pip install pandas mysql-connector-python sqlalchemy
+## **Project Structure**
+The project consists of the following files:
+- `process_data.py`: Python script containing the entire ETL pipeline.
+- `data/uber_data.csv`: The raw data file used for processing.
+
