@@ -12,12 +12,12 @@ The process consists of the following major steps:
 
 ## **Step-by-Step Description**
 
-### 1. **Loading and Preprocessing the Data**
+## 1. **Loading and Preprocessing the Data**
 The first step involved loading the raw Uber trip data from a CSV file. The data was inspected, cleaned, and transformed for further processing:
 - **Datetime Processing**: The `pickup_datetime` and `dropoff_datetime` columns were converted into `datetime` format, allowing for easier manipulation and feature extraction.
 - **Removing Duplicates**: Duplicates were removed to ensure data integrity.
 
-### 2. **Dimension Tables Creation**
+## 2. **Dimension Tables Creation**
 The following dimension tables were created from the dataset:
 
 - **Datetime Dimension**: This table captures time-related attributes like the hour, day, month, and year of both pickup and dropoff times.
@@ -27,13 +27,13 @@ The following dimension tables were created from the dataset:
 - **Location Dimensions (Pickup and Dropoff)**: These tables store unique combinations of pickup and dropoff locations using latitude and longitude coordinates.
 - **Payment Type Dimension**: This table links each trip to a payment method (e.g., credit card, cash).
 
-### 3. **Fact Table Construction**
+## 3. **Fact Table Construction**
 Once the dimension tables were created, they were merged with the original trip data to create a **fact table**. This table includes:
 - A unique `trip_id` for each record.
 - Foreign keys to link to each of the dimension tables (e.g., `datetime_id`, `passenger_count_id`, `trip_distance_id`).
 - Key metrics like `fare_amount`, `tip_amount`, and `total_amount`, which are the core facts of the dataset.
 
-### 4. **Loading the Data into MySQL**
+## 4. **Loading the Data into MySQL**
 After constructing the fact and dimension tables, the final step was to load the data into a MySQL database. The process used the `pandas` library in Python to insert the data into MySQL tables via the `SQLAlchemy` engine:
 - The fact table and dimension tables were created in the MySQL database.
 - The tables were inserted into the database using the `to_sql()` function.
