@@ -65,8 +65,8 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 - **SQLAlchemy**: For connecting and interacting with the MySQL database from Python.
 - **pandas**: For data manipulation and table creation.
 
-## **Data Flow Diagram**
-![Table Merging Diagram](images/table_merging_diagram.png)
+## **Database Schema Diagram**
+![Table Merging Diagram](images/blank_diagram.png)
 
 ## **Project Structure**
 The project consists of the following files:
