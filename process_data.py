@@ -117,8 +117,8 @@ fact_table = df \
       'tip_amount', 'tolls_amount', 'improvement_surcharge', 'total_amount']]
 
 # --- Step 10: Send Data to MySQL ---
-# Send fact table to MySQL
-fact_table.to_sql('fact_table', con=engine, if_exists='replace', index=False)
+
+create_engine('mysql+pymysql://root:**********@localhost/uber_project_db')"
 
 # Send dimension tables to MySQL
 passenger_count_dim.to_sql('passenger_count_dim', con=engine, if_exists='replace', index=False)
@@ -128,6 +128,7 @@ pickup_location_dim.to_sql('pickup_location_dim', con=engine, if_exists='replace
 dropoff_location_dim.to_sql('dropoff_location_dim', con=engine, if_exists='replace', index=False)
 datetime_dim.to_sql('datetime_dim', con=engine, if_exists='replace', index=False)
 payment_type_dim.to_sql('payment_type_dim', con=engine, if_exists='replace', index=False)
+# Send fact table to MySQL
 fact_table.to_sql('fact_table', con=engine, if_exists='replace', index=False)
 
 print("Tables have been successfully loaded into MySQL.")
