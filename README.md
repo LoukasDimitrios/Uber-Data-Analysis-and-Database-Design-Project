@@ -78,7 +78,7 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 ## **Project Structure**
 The project consists of the following files:
 - `process_data.py`: Python script containing the entire ETL pipeline.
-- `uber.`: This Power BI template contains the data model, queries, relationships, and predefined dashboards developed for the Uber Trip Data Analysis project. Connect it to your MySQL database to instantly load and explore the visualizations based on trip duration, fares, tips, and geospatial distribution.
+- `uber.pbit`: This Power BI template contains the data model, queries, relationships, and predefined dashboards developed for the Uber Trip Data Analysis project. Connect it to your MySQL database to instantly load and explore the visualizations based on trip duration, fares, tips, and geospatial distribution.
 - `data/uber_data.csv`: The raw data file used for processing.
 - `images/blank_diagram`: The Database Schema Diagram.
 - `plots/`: All the charts, plots and maps.
