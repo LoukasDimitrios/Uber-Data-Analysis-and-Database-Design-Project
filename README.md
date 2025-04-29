@@ -73,7 +73,7 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 - **Power BI**: For creating interactive dashboards and visualizing insights using data imported from the MySQL database.
 
 ## **Database Schema Diagram**
-![Table Merging Diagram](images/blank_diagram.png)
+![Table Merging Diagram](images/database_schema_diagram.png)
 
 ## **Project Structure**
 The project consists of the following files:
