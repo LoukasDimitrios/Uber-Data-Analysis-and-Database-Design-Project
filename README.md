@@ -18,7 +18,7 @@ The first step involved loading the raw Uber trip data from a CSV file. The data
 - **Removing Duplicates**: Duplicates were removed to ensure data integrity.
 
 ### 2. **Dimension Tables Creation**
-### **Database Schema Diagram**
+<h4 align="center">Database Schema Diagram</h4>
 ![Table Merging Diagram](images/database_schema_diagram.png)
 
 The following dimension tables were created from the dataset:
