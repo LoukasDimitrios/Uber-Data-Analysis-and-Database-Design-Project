@@ -41,7 +41,7 @@ After constructing the fact and dimension tables, the final step was to load the
 
 ## 5. **Data Exploration and Querying in MySQL**
 
-After loading the structured data into the MySQL database, several SQL queries were executed in **MySQL Workbench** to explore the data and extract preliminary insights. These queries helped verify the integrity of the ETL process and supported deeper understanding of usage patterns and revenue distribution.
+After loading the structured data into the MySQL database, several SQL queries were executed in **MySQL Workbench** to explore the data and extract preliminary insights. These queries helped verify the integrity of the ETL process and supported deeper understanding of usage patterns and revenue distribution. In particular, a new table, **trip_duration_categories**, was created to categorize trips based on their duration. The table was constructed using the following SQL query:
 
 ## 6. **Visualization in Power BI**
 
@@ -49,17 +49,15 @@ After loading the data into MySQL, the structured schema was connected to **Powe
 
 ### Dashboards and Charts Created:
 
-- **Total Revenue per Hour of Day**  
-  A bar chart displaying how total revenue varies by pickup hour. This helped identify peak revenue hours during the day.
+1. **Average Fare & Total Tips per Trip Duration Category**
+   - **Chart Type**: Clustered Column Chart
+   - **Description**: This chart visualizes the average fare amount and the total tip amount for each trip duration category (e.g., Very Short, Short, Medium, Long, Very Long). It helps to understand the relationship between fare and tips across different trip durations.
 
-- **Trip Count per Payment Type**  
-  A pie chart showing the percentage distribution of trips based on payment types (e.g., credit card, cash, etc.).
+2. **Average Fare Amount by Trip Duration Category**
+   - **Chart Type**: Line Chart
+   - **Description**: This chart displays the average fare amount for each trip duration category, showing how the fare amount changes as the trip duration increases. It provides insight into the correlation between trip duration and fare amounts.
 
-- **Fare Amount vs. Trip Distance**  
-  A scatter plot analyzing the correlation between the distance traveled and fare charged for each trip, useful for understanding pricing consistency.
-
-- **Trip Frequency Heatmap by Hour and Day**  
-  A heatmap visualizing trip frequency across different hours and days, helping uncover peak usage periods throughout the week.
+3. **Percentage of Trips by Trip Duration Category**
 
 ## **Technologies Used**
 - **Python**: For data manipulation, preprocessing, and ETL (using libraries like `pandas` and `sqlalchemy`).
