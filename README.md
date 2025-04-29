@@ -39,6 +39,28 @@ After constructing the fact and dimension tables, the final step was to load the
 - The tables were inserted into the database using the `to_sql()` function.
 - The schema is now ready for analysis and querying.
 
+## 5. **Data Exploration and Querying in MySQL**
+
+After loading the structured data into the MySQL database, several SQL queries were executed in **MySQL Workbench** to explore the data and extract preliminary insights. These queries helped verify the integrity of the ETL process and supported deeper understanding of usage patterns and revenue distribution.
+
+## 6. **Visualization in Power BI**
+
+After loading the data into MySQL, the structured schema was connected to **Power BI** for advanced data visualization and analysis. Using the MySQL database connector, the dimension and fact tables were imported into Power BI and relationships were defined accordingly, following the star schema structure.
+
+### Dashboards and Charts Created:
+
+- **Total Revenue per Hour of Day**  
+  A bar chart displaying how total revenue varies by pickup hour. This helped identify peak revenue hours during the day.
+
+- **Trip Count per Payment Type**  
+  A pie chart showing the percentage distribution of trips based on payment types (e.g., credit card, cash, etc.).
+
+- **Fare Amount vs. Trip Distance**  
+  A scatter plot analyzing the correlation between the distance traveled and fare charged for each trip, useful for understanding pricing consistency.
+
+- **Trip Frequency Heatmap by Hour and Day**  
+  A heatmap visualizing trip frequency across different hours and days, helping uncover peak usage periods throughout the week.
+
 ## **Technologies Used**
 - **Python**: For data manipulation, preprocessing, and ETL (using libraries like `pandas` and `sqlalchemy`).
 - **MySQL**: For storing and querying the processed data in a structured database.
