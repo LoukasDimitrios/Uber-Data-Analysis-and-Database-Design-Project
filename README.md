@@ -18,9 +18,6 @@ The first step involved loading the raw Uber trip data from a CSV file. The data
 - **Removing Duplicates**: Duplicates were removed to ensure data integrity.
 
 ### 2. **Dimension Tables Creation**
-<h4 align="center">Database Schema Diagram</h4>
-
-![Table Merging Diagram](images/database_schema_diagram.png)
 
 The following dimension tables were created from the dataset:
 
@@ -30,6 +27,11 @@ The following dimension tables were created from the dataset:
 - **Rate Code Dimension**: This table associates each trip's `RatecodeID` with a descriptive label (e.g., Standard Rate, JFK, Newark).
 - **Location Dimensions (Pickup and Dropoff)**: These tables store unique combinations of pickup and dropoff locations using latitude and longitude coordinates.
 - **Payment Type Dimension**: This table links each trip to a payment method (e.g., credit card, cash).
+<h4 align="center">Database Schema Diagram</h4>
+
+![Table Merging Diagram](images/database_schema_diagram.png)
+
+
 
 ### 3. **Fact Table Construction**
 Once the dimension tables were created, they were merged with the original trip data to create a **fact table**. This table includes:
